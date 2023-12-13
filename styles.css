@@ -1,0 +1,23 @@
+body{
+    background-image: url(https://wallpapercave.com/wp/94KfU2o.jpg);
+}
+
+h1, h2, h3, p, ol{
+    color: black;
+    font-family: 'Silkscreen', sans-serif;
+}
+
+h1{
+    border-style: dotted;
+}
+
+ol{
+    border-style: groove;
+}
+
+button{
+    background-color: black;
+    color: white;
+    border: 100cm;
+    
+}
