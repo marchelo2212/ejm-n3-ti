@@ -7,3 +7,17 @@ h1, h2, h3, p, ol{
     font-family: 'Silkscreen', sans-serif;
 }
 
+h1{
+    border-style: dotted;
+}
+
+ol{
+    border-style: groove;
+}
+
+button{
+    background-color: black;
+    color: white;
+    border: 100cm;
+    
+}
