@@ -1,10 +1,11 @@
 
 html {
-	font-size:62.5%;
+	font-size:45%;
 }
 * {
 	margin: 0;
 	padding: 0;
+  align-self: center;
 }
 ul, li {
 	list-style: none;
@@ -13,8 +14,17 @@ input {
 	border: none;
 }
 body {
-  width: 160rem;
-}.frame-1-ZZ6 {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin: 25;
+  padding: 25;
+  font-size: 45%;
+  width: 100vw;
+  height: 100vh;
+}
+
+.frame-1-ZZ6 {
   box-sizing: border-box;
   padding: 3.5rem 8.3rem 13.4rem 8.3rem;
   width: 100%;
@@ -54,18 +64,51 @@ body {
   align-items: center;
   flex-shrink: 0;
 }
-.frame-1-ZZ6 .auto-group-txpl-LVJ .rectangle-3-aHA {
-  margin-right: 8.6rem;
-  width: 25.8rem;
-  height: 9.4rem;
-  background-color: #ffffff;
-  border-radius: 2.5rem;
-  flex-shrink: 0;
+
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
 }
-.frame-1-ZZ6 .auto-group-txpl-LVJ .rectangle-2-gqz {
-  width: 25.8rem;
-  height: 9.4rem;
-  background-color: #ffffff;
-  border-radius: 2.5rem;
-  flex-shrink: 0;
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgb(255, 255, 255);
+  --animation-color: #37f2ff;
+  --fs-size: 7em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+.button-space {
+  margin-top: 35px; /* Ajusta el valor para cambiar el espacio entre los botones */
 }
